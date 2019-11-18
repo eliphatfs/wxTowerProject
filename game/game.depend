@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1574060285 source:d:\wxtower\game\gamemain.cpp
+	"gameMain.h"
+	<wx/msgdlg.h>
+	<wx/settings.h>
+	<wx/font.h>
+	<wx/intl.h>
+	<wx/string.h>
+
+1574060285 d:\wxtower\game\gamemain.h
+	<wx/sizer.h>
+	<wx/stattext.h>
+	<wx/statline.h>
+	<wx/button.h>
+	<wx/dialog.h>
+
+1574060285 source:d:\wxtower\game\resource.rc
+	"wx/msw/wx.rc"
+
+1574060285 source:d:\wxtower\game\gameapp.cpp
+	"gameApp.h"
+	"gameMain.h"
+	<wx/image.h>
+
+1574060285 d:\wxtower\game\gameapp.h
+	<wx/app.h>
+
