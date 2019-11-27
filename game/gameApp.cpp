@@ -16,19 +16,15 @@
 
 IMPLEMENT_APP(gameApp);
 
-bool gameApp::OnInit()
-{
+bool gameApp::OnInit() {
     //(*AppInitialize
     bool wxsOK = true;
     wxInitAllImageHandlers();
-    if ( wxsOK )
-    {
+    if (wxsOK) {
     	gameDialog Dlg(0);
     	SetTopWindow(&Dlg);
     	Dlg.ShowModal();
     	wxsOK = false;
     }
-    //*)
     return wxsOK;
-
 }
