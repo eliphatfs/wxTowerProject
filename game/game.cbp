@@ -76,6 +76,8 @@
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
+		<Unit filename="vec3.cpp" />
+		<Unit filename="vec3.h" />
 		<Unit filename="world.cpp" />
 		<Unit filename="world.h" />
 		<Unit filename="wxsmith\gamedialog.wxs" />

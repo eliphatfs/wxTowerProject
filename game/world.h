@@ -1,5 +1,6 @@
 #ifndef WORLD_H_INCLUDED
 #define WORLD_H_INCLUDED
+
 enum world_block_t {
     wall=1, space, door, key, skeleton, witch, boss
 };
