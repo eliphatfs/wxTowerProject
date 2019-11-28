@@ -71,6 +71,12 @@ void game_render_inbuffer() {
             if (i == 16 && j == 10) draw_bitmap(get_image_by_id(walk_0), s);
         }
     }
+    char buf[32];
+    sprintf(buf, "(%.3lf, %.3lf)", pos.vector[0], pos.vector[1]);
+    vec3_t colorBlack = { { 0.0, 0.0, 0.0 } };
+    draw_string(buf, pos, colorBlack);
+    vec3_t colorGreen = { { 0.2, 0.9, 0.2 } };
+    draw_string(buf, pos2, colorGreen);
     // draw_bitmap(get_image_by_id(image_id), pos);
     // draw_bitmap(get_image_by_id(image_id), pos2);
 }

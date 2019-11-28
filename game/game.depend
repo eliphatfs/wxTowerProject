@@ -31,7 +31,7 @@
 
 1574852495 d:\wxtower\game\world.h
 
-1574943287 source:d:\sjtu\wxtowerproject\game\gamemain.cpp
+1574955488 source:d:\sjtu\wxtowerproject\game\gamemain.cpp
 	"gameMain.h"
 	"resource_loader.h"
 	"renderer.h"
@@ -3492,11 +3492,14 @@
 	"wx/defs.h"
 	"wx/stream.h"
 
-1574941029 source:d:\sjtu\wxtowerproject\game\renderer.cpp
+1574955531 source:d:\sjtu\wxtowerproject\game\renderer.cpp
 	"renderer.h"
+	"resource_loader.h"
+	"math_helpers.h"
+	<cstdio>
 	<wx/dcbuffer.h>
 
-1574941029 d:\sjtu\wxtowerproject\game\renderer.h
+1574954707 d:\sjtu\wxtowerproject\game\renderer.h
 	<wx/wx.h>
 	"vec3.h"
 
@@ -3512,4 +3515,8 @@
 	"wx/dcmemory.h"
 	"wx/dcclient.h"
 	"wx/window.h"
+
+1574900628 d:\sjtu\wxtowerproject\game\math_helpers.h
+	<cmath>
+	<algorithm>
 
