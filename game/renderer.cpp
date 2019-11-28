@@ -47,7 +47,7 @@ void draw_string(char * str, vec3_t screenPos, vec3_t rgb) {
                              (unsigned char)(clampd(rgb.vector[1], 0.0, 1.0) * 255),
                              (unsigned char)(clampd(rgb.vector[2], 0.0, 1.0) * 255));
             realBuf->Paste(tempCopy, curX, curY);
-            curX += 16;
+            curX += 13;
         }
         ++str;
     }
