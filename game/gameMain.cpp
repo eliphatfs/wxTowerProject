@@ -17,7 +17,7 @@
 #include <iostream>
 using namespace std;
 
-long image_id;
+long image_id, bg_tile, walk_0;
 vec3_t pos = { { -10.0, -10.0, 1.0 } };
 vec3_t pos2 = { { 10.0, 10.0, 1.0 } };
 
@@ -48,6 +48,8 @@ gameMain::gameMain(wxWindow * parent): wxPanel(parent, 0, 0, RBUF_W, RBUF_H) {
     initialize_render_buffer();
 
     image_id = load_png_image("res/9.png");
+    bg_tile = load_png_image("res/bg_0.png");
+    walk_0 = load_png_image("res/walks/flandre_000.png");
 
     game_render_inbuffer();
 
@@ -62,6 +64,13 @@ gameMain::~gameMain() {
 
 void game_render_inbuffer() {
     begin_frame(true);
-    draw_bitmap(get_image_by_id(image_id), pos);
-    draw_bitmap(get_image_by_id(image_id), pos2);
+    for (int i = 0; i < 32; i++) {
+        for (int j = 0; j < 20; j++) {
+            vec3_t s = { { i * 36 - 26, j * 36 - 26, 1.0 } };
+            draw_bitmap(get_image_by_id(bg_tile), s);
+            if (i == 16 && j == 10) draw_bitmap(get_image_by_id(walk_0), s);
+        }
+    }
+    // draw_bitmap(get_image_by_id(image_id), pos);
+    // draw_bitmap(get_image_by_id(image_id), pos2);
 }
