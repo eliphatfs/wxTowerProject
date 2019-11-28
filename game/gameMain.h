@@ -25,15 +25,16 @@ class gameDialog: public wxDialog {
     private:
 
         //(*Handlers(gameDialog)
+            void mouse_left(wxMouseEvent& event);
         //*)
 
         //(*Identifiers(gameDialog)
-        static const long ID_STATICBITMAPMAIN;
+            static const long ID_STATICBITMAPMAIN;
         //*)
 
         //(*Declarations(gameDialog)
-        wxStaticBitmap* StaticBitmapMain;
-        wxBoxSizer* BoxSizer;
+            wxStaticBitmap* StaticBitmapMain;
+            wxBoxSizer* BoxSizer;
         //*)
 
         DECLARE_EVENT_TABLE()

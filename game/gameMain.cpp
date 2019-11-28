@@ -8,38 +8,67 @@
  **************************************************************/
 
 #include "gameMain.h"
-#include <wx/msgdlg.h>
-
-//(*InternalHeaders(gameDialog)
+#include "resource_loader.h"
+#include "renderer.h"
+#include "vec3.h"
 #include <wx/wx.h>
-#include <wx/string.h>
-#include <wx/mstream.h>
-//*)
+#include <cstdio>
+#include <iostream>
+using namespace std;
 
-//(*IdInit(gameDialog)
 const long gameDialog::ID_STATICBITMAPMAIN = wxNewId();
-//*)
+wxStaticBitmap * mainStaticBitmap;
 
-BEGIN_EVENT_TABLE(gameDialog,wxDialog)
-    //(*EventTable(gameDialog)
-    //*)
+long image_id;
+vec3_t pos = { { -10.0, -10.0, 1.0 } };
+vec3_t pos2 = { { 10.0, 10.0, 1.0 } };
+void game_render();
+
+void gameDialog::mouse_left(wxMouseEvent& event) {
+    vec3_t npos = { { event.GetX(), event.GetY(), 1.0 } };
+    pos = npos;
+    cout << 1 << endl;
+    game_render();
+}
+
+BEGIN_EVENT_TABLE(gameDialog, wxDialog)
+    EVT_LEFT_UP(gameDialog::mouse_left)
 END_EVENT_TABLE()
 
-gameDialog::gameDialog(wxWindow* parent, wxWindowID id) {
+void game_render() {
+    begin_frame(true);
+    draw_bitmap(get_image_by_id(image_id), pos);
+    draw_bitmap(get_image_by_id(image_id), pos2);
+    end_frame();
+
+    mainStaticBitmap->SetBitmap(get_render_buffer());
+}
+
+gameDialog::gameDialog(wxWindow * parent, wxWindowID id) {
+    freopen("wxTowerProject.log", "a", stdout);
     //(*Initialize(gameDialog)
+    initialize_render_buffer();
+
+
     Create(parent, wxID_ANY, _("WX Tower Project"), wxPoint(150, 120), wxDefaultSize, wxCAPTION | wxSYSTEM_MENU | wxCLOSE_BOX | wxBORDER, _T("wxID_ANY"));
     SetClientSize(wxSize(800, 600));
     BoxSizer = new wxBoxSizer(wxHORIZONTAL);
-    wxImage* image = new wxImage();
-    image->LoadFile(wxString::FromUTF8("res/9.png"), wxBITMAP_TYPE_PNG, -1);
-    StaticBitmapMain = new wxStaticBitmap(this, ID_STATICBITMAPMAIN, wxBitmap(*image), wxDefaultPosition, wxSize(800, 600), 0, _T("ID_STATICBITMAPMAIN"));
+
+    image_id = load_png_image("res/9.png");
+    mainStaticBitmap = StaticBitmapMain = new wxStaticBitmap(this, ID_STATICBITMAPMAIN, get_render_buffer(), wxDefaultPosition, wxSize(RBUF_W, RBUF_H), 0, _T("ID_STATICBITMAPMAIN"));
+    StaticBitmapMain->Connect(wxID_ANY, wxEVT_LEFT_UP, wxMouseEventHandler(gameDialog::mouse_left), NULL, this);
+
+    game_render();
+
     BoxSizer->Add(StaticBitmapMain, 1, wxALL | wxALIGN_CENTER_HORIZONTAL | wxALIGN_CENTER_VERTICAL, 0);
     SetSizer(BoxSizer);
     BoxSizer->SetSizeHints(this);
+
+    Centre();
     //*)
 }
 
 gameDialog::~gameDialog() {
-    //(*Destroy(gameDialog)
-    //*)
+    unload_all_loaded_images();
+    release_render_buffer();
 }

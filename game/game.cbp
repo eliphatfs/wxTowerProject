@@ -80,7 +80,6 @@
 		<Unit filename="vec3.h" />
 		<Unit filename="world.cpp" />
 		<Unit filename="world.h" />
-		<Unit filename="wxsmith\gamedialog.wxs" />
 		<Extensions>
 			<code_completion />
 			<envvars />
