@@ -10,32 +10,19 @@
 #ifndef GAMEMAIN_H
 #define GAMEMAIN_H
 
-//(*Headers(gameDialog)
-#include <wx/sizer.h>
-#include <wx/statbmp.h>
-#include <wx/dialog.h>
-//*)
+#include <wx/wx.h>
 
-class gameDialog: public wxDialog {
+class gameMain: public wxPanel {
     public:
 
-        gameDialog(wxWindow* parent, wxWindowID id = -1);
-        virtual ~gameDialog();
+        gameMain(wxWindow* parent);
+        virtual ~gameMain();
 
     private:
 
-        //(*Handlers(gameDialog)
-            void mouse_left(wxMouseEvent& event);
-        //*)
-
-        //(*Identifiers(gameDialog)
-            static const long ID_STATICBITMAPMAIN;
-        //*)
-
-        //(*Declarations(gameDialog)
-            wxStaticBitmap* StaticBitmapMain;
-            wxBoxSizer* BoxSizer;
-        //*)
+        void mouse_left(wxMouseEvent& event);
+        void render_self(wxPaintEvent& evt);
+        void catch_erase_background(wxEraseEvent& event);
 
         DECLARE_EVENT_TABLE()
 };

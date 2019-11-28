@@ -31,20 +31,18 @@
 
 1574852495 d:\wxtower\game\world.h
 
-1574923461 source:d:\sjtu\wxtowerproject\game\gamemain.cpp
+1574940404 source:d:\sjtu\wxtowerproject\game\gamemain.cpp
 	"gameMain.h"
 	"resource_loader.h"
 	"renderer.h"
 	"vec3.h"
-	<wx/msgdlg.h>
 	<wx/wx.h>
-	<wx/string.h>
-	<wx/mstream.h>
+	<cstdio>
+	<cstdlib>
+	<iostream>
 
-1574928372 d:\sjtu\wxtowerproject\game\gamemain.h
-	<wx/sizer.h>
-	<wx/statbmp.h>
-	<wx/dialog.h>
+1574941126 d:\sjtu\wxtowerproject\game\gamemain.h
+	<wx/wx.h>
 
 1300766372 d:\sjtu\wxwidgets\include\wx\sizer.h
 	"wx/defs.h"
@@ -1722,10 +1720,10 @@
 
 1300766456 d:\sjtu\wxwidgets\include\wx\msw\rcdefs.h
 
-1574872024 source:d:\sjtu\wxtowerproject\game\gameapp.cpp
+1574940205 source:d:\sjtu\wxtowerproject\game\gameapp.cpp
 	"gameApp.h"
 	"gameMain.h"
-	<wx/image.h>
+	<wx/wx.h>
 
 1573648847 d:\sjtu\wxtowerproject\game\gameapp.h
 	<wx/app.h>
@@ -3494,10 +3492,11 @@
 	"wx/defs.h"
 	"wx/stream.h"
 
-1574927201 source:d:\sjtu\wxtowerproject\game\renderer.cpp
+1574940318 source:d:\sjtu\wxtowerproject\game\renderer.cpp
 	"renderer.h"
+	<wx/dcbuffer.h>
 
-1574924230 d:\sjtu\wxtowerproject\game\renderer.h
+1574936555 d:\sjtu\wxtowerproject\game\renderer.h
 	<wx/wx.h>
 	"vec3.h"
 
@@ -3508,4 +3507,9 @@
 1574923910 source:d:\sjtu\wxtowerproject\game\resource_loader.cpp
 	"resource_loader.h"
 	<vector>
+
+1300766370 d:\sjtu\wxwidgets\include\wx\dcbuffer.h
+	"wx/dcmemory.h"
+	"wx/dcclient.h"
+	"wx/window.h"
 
