@@ -73,9 +73,18 @@
 		<Unit filename="gameApp.h" />
 		<Unit filename="gameMain.cpp" />
 		<Unit filename="gameMain.h" />
+		<Unit filename="game_map_editor.cpp" />
+		<Unit filename="game_map_editor.h" />
+		<Unit filename="game_render.cpp" />
+		<Unit filename="game_render.h" />
+		<Unit filename="math_helpers.h" />
+		<Unit filename="renderer.cpp" />
+		<Unit filename="renderer.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
+		<Unit filename="resource_loader.cpp" />
+		<Unit filename="resource_loader.h" />
 		<Unit filename="vec3.cpp" />
 		<Unit filename="vec3.h" />
 		<Unit filename="world.cpp" />
