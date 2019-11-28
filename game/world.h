@@ -2,7 +2,7 @@
 #define WORLD_H_INCLUDED
 
 enum world_block_t {
-    wall=1, space, door, key, skeleton, witch, boss, diamond, potion
+    wall=1, space, door, key, skeleton, witch, boss, sword, shield, potion
 };
 
 world_block_t get_world_block(int x, int y);

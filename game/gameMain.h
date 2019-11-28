@@ -20,7 +20,8 @@ class gameMain: public wxPanel {
 
     private:
 
-        void mouse_left(wxMouseEvent& event);
+        void mouse_event(wxMouseEvent& event);
+        void keyboard_event(wxKeyEvent& event);
         void render_self(wxPaintEvent& evt);
         void catch_erase_background(wxEraseEvent& event);
 

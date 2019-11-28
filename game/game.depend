@@ -31,9 +31,11 @@
 
 1574852495 d:\wxtower\game\world.h
 
-1574955590 source:d:\sjtu\wxtowerproject\game\gamemain.cpp
+1575008287 source:d:\sjtu\wxtowerproject\game\gamemain.cpp
 	"gameMain.h"
 	"resource_loader.h"
+	"game_map_editor.h"
+	"game_render.h"
 	"renderer.h"
 	"vec3.h"
 	<wx/wx.h>
@@ -41,7 +43,7 @@
 	<cstdlib>
 	<iostream>
 
-1574941126 d:\sjtu\wxtowerproject\game\gamemain.h
+1575004673 d:\sjtu\wxtowerproject\game\gamemain.h
 	<wx/wx.h>
 
 1300766372 d:\sjtu\wxwidgets\include\wx\sizer.h
@@ -2018,7 +2020,7 @@
 	"world.h"
 	<iostream>
 
-1574899326 d:\sjtu\wxtowerproject\game\world.h
+1575005026 d:\sjtu\wxtowerproject\game\world.h
 
 1300766372 d:\sjtu\wxwidgets\include\wx\statbmp.h
 	"wx/defs.h"
@@ -3516,7 +3518,25 @@
 	"wx/dcclient.h"
 	"wx/window.h"
 
-1574900628 d:\sjtu\wxtowerproject\game\math_helpers.h
+1575003863 d:\sjtu\wxtowerproject\game\math_helpers.h
 	<cmath>
 	<algorithm>
+
+1575008298 d:\sjtu\wxtowerproject\game\game_map_editor.h
+	<wx/wx.h>
+
+1575006173 d:\sjtu\wxtowerproject\game\game_render.h
+	"renderer.h"
+	"resource_loader.h"
+	"vec3.h"
+
+1575006235 source:d:\sjtu\wxtowerproject\game\game_map_editor.cpp
+	"game_map_editor.h"
+	"game_render.h"
+	"world.h"
+	"vec3.h"
+
+1575008336 source:d:\sjtu\wxtowerproject\game\game_render.cpp
+	"game_render.h"
+	"world.h"
 
