@@ -73,8 +73,12 @@
 		<Unit filename="gameApp.h" />
 		<Unit filename="gameMain.cpp" />
 		<Unit filename="gameMain.h" />
+		<Unit filename="game_io.cpp" />
+		<Unit filename="game_io.h" />
 		<Unit filename="game_map_editor.cpp" />
 		<Unit filename="game_map_editor.h" />
+		<Unit filename="game_play.cpp" />
+		<Unit filename="game_play.h" />
 		<Unit filename="game_render.cpp" />
 		<Unit filename="game_render.h" />
 		<Unit filename="math_helpers.h" />
