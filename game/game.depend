@@ -1,26 +1,26 @@
 # depslib dependency file v1.0
-1574060285 source:d:\wxtower\game\gamemain.cpp
+1575008916 source:d:\wxtower\game\gamemain.cpp
 	"gameMain.h"
-	<wx/msgdlg.h>
-	<wx/settings.h>
-	<wx/font.h>
-	<wx/intl.h>
-	<wx/string.h>
+	"resource_loader.h"
+	"game_map_editor.h"
+	"game_render.h"
+	"renderer.h"
+	"vec3.h"
+	<wx/wx.h>
+	<cstdio>
+	<cstdlib>
+	<iostream>
 
-1574060285 d:\wxtower\game\gamemain.h
-	<wx/sizer.h>
-	<wx/stattext.h>
-	<wx/statline.h>
-	<wx/button.h>
-	<wx/dialog.h>
+1575008916 d:\wxtower\game\gamemain.h
+	<wx/wx.h>
 
 1574060285 source:d:\wxtower\game\resource.rc
 	"wx/msw/wx.rc"
 
-1574060285 source:d:\wxtower\game\gameapp.cpp
+1575008264 source:d:\wxtower\game\gameapp.cpp
 	"gameApp.h"
 	"gameMain.h"
-	<wx/image.h>
+	<wx/wx.h>
 
 1574060285 d:\wxtower\game\gameapp.h
 	<wx/app.h>
@@ -29,7 +29,7 @@
 	"world.h"
 	<iostream>
 
-1574852495 d:\wxtower\game\world.h
+1575008916 d:\wxtower\game\world.h
 
 1575008287 source:d:\sjtu\wxtowerproject\game\gamemain.cpp
 	"gameMain.h"
@@ -3539,4 +3539,56 @@
 1575008336 source:d:\sjtu\wxtowerproject\game\game_render.cpp
 	"game_render.h"
 	"world.h"
+
+1575011617 source:d:\wxtower\game\vec3.cpp
+	"vec3.h"
+	<cstring>
+
+1575011549 d:\wxtower\game\vec3.h
+
+1575008264 d:\wxtower\game\resource_loader.h
+	<wx/wx.h>
+	<memory>
+
+1575008916 d:\wxtower\game\game_map_editor.h
+	<wx/wx.h>
+
+1575008916 d:\wxtower\game\game_render.h
+	"renderer.h"
+	"resource_loader.h"
+	"vec3.h"
+
+1575008264 d:\wxtower\game\renderer.h
+	<wx/wx.h>
+	"vec3.h"
+
+1575008916 source:d:\wxtower\game\game_map_editor.cpp
+	"game_map_editor.h"
+	"game_render.h"
+	"world.h"
+	"vec3.h"
+
+1575008916 source:d:\wxtower\game\game_render.cpp
+	"game_render.h"
+	"world.h"
+
+1575008264 source:d:\wxtower\game\renderer.cpp
+	"renderer.h"
+	"resource_loader.h"
+	"math_helpers.h"
+	<cstdio>
+	<wx/dcbuffer.h>
+
+1575008916 d:\wxtower\game\math_helpers.h
+	<cmath>
+	<algorithm>
+
+1575008264 source:d:\wxtower\game\resource_loader.cpp
+	"resource_loader.h"
+	<vector>
+
+1575020333 source:d:\wxtower\game\player.cpp
+	"player.h"
+
+1575020429 d:\wxtower\game\player.h
 

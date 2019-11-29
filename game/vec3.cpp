@@ -24,3 +24,16 @@ mat33_t mat33_t::left_mul(mat33_t &matin) {
     }
     return matout;
 }
+mat33_t mat33_t::translate(double a, double b) {
+    mat33_t mattrans;
+    memset(mattrans.matrix, 0, sizeof(double) * 9);
+    for(int i = 0; i < 3; i++) {
+        mattrans.matrix[i][i] = 1;
+    }
+    mattrans.matrix[0][2] = a;
+    mattrans.matrix[1][2] = b;
+    return mattrans;
+}
+double& vec3_t::operator[](int num) {
+    return vector[num];
+}

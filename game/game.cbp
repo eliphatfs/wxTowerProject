@@ -78,6 +78,8 @@
 		<Unit filename="game_render.cpp" />
 		<Unit filename="game_render.h" />
 		<Unit filename="math_helpers.h" />
+		<Unit filename="player.cpp" />
+		<Unit filename="player.h" />
 		<Unit filename="renderer.cpp" />
 		<Unit filename="renderer.h" />
 		<Unit filename="resource.rc">
