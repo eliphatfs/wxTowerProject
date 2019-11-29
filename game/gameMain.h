@@ -24,6 +24,7 @@ class gameMain: public wxPanel {
         void keyboard_event(wxKeyEvent& event);
         void render_self(wxPaintEvent& evt);
         void catch_erase_background(wxEraseEvent& event);
+        void on_idle(wxIdleEvent& evt);
 
         DECLARE_EVENT_TABLE()
 };

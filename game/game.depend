@@ -31,19 +31,22 @@
 
 1575008916 d:\wxtower\game\world.h
 
-1575008287 source:d:\sjtu\wxtowerproject\game\gamemain.cpp
+1575025725 source:d:\sjtu\wxtowerproject\game\gamemain.cpp
 	"gameMain.h"
 	"resource_loader.h"
 	"game_map_editor.h"
 	"game_render.h"
 	"renderer.h"
+	"player.h"
+	"game_io.h"
+	"game_play.h"
 	"vec3.h"
 	<wx/wx.h>
 	<cstdio>
 	<cstdlib>
 	<iostream>
 
-1575004673 d:\sjtu\wxtowerproject\game\gamemain.h
+1575025545 d:\sjtu\wxtowerproject\game\gamemain.h
 	<wx/wx.h>
 
 1300766372 d:\sjtu\wxwidgets\include\wx\sizer.h
@@ -2010,11 +2013,11 @@
 1300766488 d:\sjtu\wxwidgets\include\wx\univ\theme.h
 	"wx/string.h"
 
-1574869705 source:d:\sjtu\wxtowerproject\game\vec3.cpp
+1575020979 source:d:\sjtu\wxtowerproject\game\vec3.cpp
 	"vec3.h"
 	<cstring>
 
-1574869705 d:\sjtu\wxtowerproject\game\vec3.h
+1575020979 d:\sjtu\wxtowerproject\game\vec3.h
 
 1574730092 source:d:\sjtu\wxtowerproject\game\world.cpp
 	"world.h"
@@ -3525,20 +3528,24 @@
 1575008298 d:\sjtu\wxtowerproject\game\game_map_editor.h
 	<wx/wx.h>
 
-1575006173 d:\sjtu\wxtowerproject\game\game_render.h
+1575022271 d:\sjtu\wxtowerproject\game\game_render.h
 	"renderer.h"
 	"resource_loader.h"
 	"vec3.h"
 
-1575008354 source:d:\sjtu\wxtowerproject\game\game_map_editor.cpp
+1575023557 source:d:\sjtu\wxtowerproject\game\game_map_editor.cpp
 	"game_map_editor.h"
 	"game_render.h"
 	"world.h"
 	"vec3.h"
+	"game_io.h"
+	"player.h"
 
-1575008336 source:d:\sjtu\wxtowerproject\game\game_render.cpp
+1575025782 source:d:\sjtu\wxtowerproject\game\game_render.cpp
 	"game_render.h"
 	"world.h"
+	"player.h"
+	<cstdio>
 
 1575011617 source:d:\wxtower\game\vec3.cpp
 	"vec3.h"
@@ -3591,4 +3598,28 @@
 	"player.h"
 
 1575020429 d:\wxtower\game\player.h
+
+1575022992 source:d:\sjtu\wxtowerproject\game\game_io.cpp
+	"world.h"
+	"player.h"
+	<fstream>
+	<iostream>
+
+1575022669 d:\sjtu\wxtowerproject\game\player.h
+	"world.h"
+
+1575025701 source:d:\sjtu\wxtowerproject\game\game_play.cpp
+	"game_play.h"
+	"vec3.h"
+	"player.h"
+	"game_render.h"
+	"world.h"
+
+1575023399 d:\sjtu\wxtowerproject\game\game_play.h
+	<wx/wx.h>
+
+1575021606 source:d:\sjtu\wxtowerproject\game\player.cpp
+	"player.h"
+
+1575021227 d:\sjtu\wxtowerproject\game\game_io.h
 

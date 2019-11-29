@@ -47,3 +47,27 @@ bool player_t::action_fightable(int enemy_hp, int enemy_attack, int enemy_defenc
         return true;
     }
 }
+bool player_t::action(world_block_t block_type) {
+    switch (block_type) {
+        case wall:
+            return action_wall();
+        case door:
+            return action_door();
+        case key:
+            return action_key();
+        case sword:
+            return action_sword();
+        case shield:
+            return action_shield();
+        case potion:
+            return action_potion();
+        case skeleton:
+            return action_fightable(50, 2, 0);
+        case witch:
+            return action_fightable(150, 42, 10);
+        case boss:
+            return action_fightable(3000, 101, 20);
+        default:
+            return true;
+    }
+}

@@ -5,6 +5,6 @@
 #include "vec3.h"
 
 void game_render_initialize();
-void game_render_inbuffer(const vec3_t& center);
+void game_render_inbuffer(const vec3_t& center, bool editormode);
 
 #endif
