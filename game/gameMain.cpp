@@ -81,6 +81,7 @@ void gameMain::render_self(wxPaintEvent& event) {
 
 gameMain::gameMain(wxWindow * parent): wxPanel(parent, 0, 0, RBUF_W, RBUF_H) {
     freopen("wxTowerProject.log", "a", stdout);
+    load_config("res/config.txt");
     load_state("res/map_data.bin");
     editor_mode = true;
     initialize_render_buffer();

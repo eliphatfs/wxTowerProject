@@ -1,4 +1,5 @@
 #include "player.h"
+#include "game_io.h"
 
 static player_t player;
 player_t& get_player() {
@@ -15,18 +16,18 @@ int player_t::hp_down(int enemy_hp, int enemy_attack, int enemy_defence) {
     else return health;
 }
 bool player_t::action_sword() {
-    attack += 5;
+    attack += game_config[0];
     return true;
 }
 bool player_t::action_shield() {
-    defence += 5;
+    defence += game_config[1];
     return true;
 }
 bool player_t::action_wall() {
     return false;
 }
 bool player_t::action_potion() {
-    hp += 100;
+    hp += game_config[2];
     return true;
 }
 bool player_t::action_door() {
@@ -62,11 +63,11 @@ bool player_t::action(world_block_t block_type) {
         case potion:
             return action_potion();
         case skeleton:
-            return action_fightable(50, 2, 0);
+            return action_fightable(game_config[3], game_config[4], game_config[5]);
         case witch:
-            return action_fightable(150, 42, 10);
+            return action_fightable(game_config[6], game_config[7], game_config[8]);
         case boss:
-            return action_fightable(3000, 101, 20);
+            return action_fightable(game_config[9], game_config[10], game_config[11]);
         default:
             return true;
     }

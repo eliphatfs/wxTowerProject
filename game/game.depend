@@ -31,7 +31,7 @@
 
 1575008916 d:\wxtower\game\world.h
 
-1575025725 source:d:\sjtu\wxtowerproject\game\gamemain.cpp
+1575026252 source:d:\sjtu\wxtowerproject\game\gamemain.cpp
 	"gameMain.h"
 	"resource_loader.h"
 	"game_map_editor.h"
@@ -3599,7 +3599,7 @@
 
 1575020429 d:\wxtower\game\player.h
 
-1575022992 source:d:\sjtu\wxtowerproject\game\game_io.cpp
+1575026229 source:d:\sjtu\wxtowerproject\game\game_io.cpp
 	"world.h"
 	"player.h"
 	<fstream>
@@ -3618,8 +3618,9 @@
 1575023399 d:\sjtu\wxtowerproject\game\game_play.h
 	<wx/wx.h>
 
-1575021606 source:d:\sjtu\wxtowerproject\game\player.cpp
+1575026372 source:d:\sjtu\wxtowerproject\game\player.cpp
 	"player.h"
+	"game_io.h"
 
-1575021227 d:\sjtu\wxtowerproject\game\game_io.h
+1575026388 d:\sjtu\wxtowerproject\game\game_io.h
 

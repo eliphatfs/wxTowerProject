@@ -1,6 +1,7 @@
 #include "game_render.h"
 #include "world.h"
 #include "player.h"
+#include "game_io.h"
 #include <cstdio>
 using namespace std;
 
@@ -52,17 +53,25 @@ void game_render_inbuffer(const vec3_t& center, bool editormode) {
             draw_bitmap(get_image_by_id(tile_extras[(int)get_world_block(i, j)]), pos);
             if (editormode && i == get_player().x && j == get_player().y)
                 draw_bitmap(get_image_by_id(walk_0), pos);
+        }
+    }
+    for (int i = originX; i < originX + 25; i++) {
+        for (int j = originY; j < originY + 20; j++) {
+            vec3_t pos = { { i * 36.0 - origin.vector[0], j * 36.0 - origin.vector[1], 1.0 } };
+            if (i < 0 || i >= 1000 || j < 0 || j >= 1000) {
+                continue;
+            }
             if (!editormode) {
                 int req = -1;
                 switch (get_world_block(i, j)) {
                     case skeleton:
-                        req = get_player().hp_down(50, 2, 0);
+                        req = get_player().hp_down(game_config[3], game_config[4], game_config[5]);
                         break;
                     case witch:
-                        req = get_player().hp_down(150, 42, 10);
+                        req = get_player().hp_down(game_config[6], game_config[7], game_config[8]);
                         break;
                     case boss:
-                        req = get_player().hp_down(3000, 101, 20);
+                        req = get_player().hp_down(game_config[9], game_config[10], game_config[11]);
                         break;
                 }
                 if (req > -1) {

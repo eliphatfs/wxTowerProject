@@ -4,6 +4,8 @@
 #include <iostream>
 using namespace std;
 
+int game_config[12];
+
 void dump_state(const char * path) {
     ofstream file(path, ios::binary);
     player_t plr = get_player();
@@ -14,6 +16,12 @@ void dump_state(const char * path) {
             file.write((char *)&block, sizeof(world_block_t));
         }
     }
+}
+
+void load_config(const char * path) {
+    ifstream file(path);
+    for (int i = 0; i < 12; i++)
+        file >> game_config[i];
 }
 
 void load_state(const char * path) {
