@@ -3541,10 +3541,11 @@
 	"game_io.h"
 	"player.h"
 
-1575025782 source:d:\sjtu\wxtowerproject\game\game_render.cpp
+1575026956 source:d:\sjtu\wxtowerproject\game\game_render.cpp
 	"game_render.h"
 	"world.h"
 	"player.h"
+	"game_io.h"
 	<cstdio>
 
 1575011617 source:d:\wxtower\game\vec3.cpp
